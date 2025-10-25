@@ -1,4 +1,5 @@
 {% extends "base.html" %} {% block content %}
 <h1>Welcome to the Dashboard Home</h1>
 <p>This is the main page of the dashboard.</p>
+<button class="btn" hx-post="/clicked" hx-swap="outerHTML">Click Me!</button>
 {% endblock %}

@@ -17,9 +17,10 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
-from dashboard.views import dashboard_home
+from dashboard.views import dashboard_home, button_clicked
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", dashboard_home, name="dashboard-home"),
+    path("clicked", button_clicked, name="button-clicked"),
 ]
