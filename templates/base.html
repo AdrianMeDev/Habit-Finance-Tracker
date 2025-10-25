@@ -1,11 +1,10 @@
-{% load staticfiles %}
-
-<!DOCTYPE html>
+{% load static %} {% load django_htmx %}
 <html>
   <head>
-    <title>My Project</title>
+    <title>My Project</title     
+    {% htmx_script %}
   </head>
-  <body>
+   <body hx-headers='{"x-csrftoken": "{{ csrf_token }}"}'>
     {% block content %}{% endblock %}
   </body>
 </html>
